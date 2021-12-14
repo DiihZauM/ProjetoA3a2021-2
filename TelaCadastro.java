@@ -145,7 +145,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         String senha = jPasswordFieldSenha.getText();
             try{
             Connection conexao = new ConexaoBanco().getObtemConexao();
-            String sql = "inset into tb_Cliente(nome,cpf,telefone,endereco,email,senha)values('"+name+"','"+cpf+"','"+telefone+"','"+endereco+"'"+email+"'"+senha+"')";
+            String sql = "insert into tb_Cliente(nome,cpf,telefone,endereco,email,senha)values('"+name+"','"+cpf+"','"+telefone+"','"+endereco+"'"+email+"'"+senha+"')";
 
             PreparedStatement Statement = conexao.prepareStatement(sql);
             Statement.execute();
